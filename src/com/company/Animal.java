@@ -1,5 +1,7 @@
 package com.company;
 
+import Interfaces.Info;
+
 public class Animal {
 
     String name = "Some animal";
