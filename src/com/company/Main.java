@@ -1,34 +1,34 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-        Animal hippo = new Animal();
-        Animal clifford = new Dog();
-        Animal animal = new Animal();
-        Dog dog = new Dog();
-        Cat cat = new Cat();
+        List<Animal> listOfAnimals = new ArrayList<>();
+        listOfAnimals.add(new Animal(0));
+        listOfAnimals.add(new Animal(1));
 
-        hippo.eat();
-        hippo.sleep();
+        test(listOfAnimals);
 
-        System.out.println(" ");
+        List<Animal> listOfDogs = new ArrayList<>();
+        listOfDogs.add(new Dog(2));
+        listOfDogs.add(new Dog(3));
 
-        Dog pug = new Dog();
-        pug.eat();
-        pug.sleep();
-        pug.bark();
-        pug.setName("King");
-        pug.getName();
+        test(listOfDogs);
 
-        clifford.eat();
+        List<Animal> listOfCats = new ArrayList<>();
+        listOfCats.add(new Cat(1));
 
-        test(animal);
-        test(cat);
-        test(dog);
+        test(listOfCats);
+
+
     }
 
-    public static void test (Animal animal){
-        animal.eat();
+    private static void test(List<Animal> list){
+        for(Animal animal : list){
+            System.out.println(animal);
+        }
     }
 }
