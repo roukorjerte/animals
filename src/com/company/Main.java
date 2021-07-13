@@ -12,18 +12,22 @@ public class Main {
 
         test(listOfAnimals);
 
-        List<Animal> listOfDogs = new ArrayList<>();
-        listOfDogs.add(new Dog(2));
-        listOfDogs.add(new Dog(3));
+   //     List<Animal> listOfDogs = new ArrayList<>();
+   //     listOfDogs.add(new Dog(2));
+   //     listOfDogs.add(new Dog(3));
 
-        test(listOfDogs);
+   //     test(listOfDogs);
 
-        List<Animal> listOfCats = new ArrayList<>();
-        listOfCats.add(new Cat(1));
+        Animal animal1 = new Animal();
 
-        test(listOfCats);
+        Animal animal2 = new Animal(){
+          public void eat(){
+              System.out.println("Other animal is eating");
+          }
+        };
 
-
+        animal1.eat();
+        animal2.eat();
     }
 
     private static void test(List<Animal> list){

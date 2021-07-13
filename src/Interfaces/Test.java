@@ -17,5 +17,13 @@ public class Test {
         info1.showInfo();
         info2.showInfo();
 
+        Info info = new Info() {
+            @Override
+            public void showInfo() {
+                System.out.println("here is your info");
+            }
+        };
+
+        info.showInfo();
     }
 }
